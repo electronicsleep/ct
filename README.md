@@ -1,6 +1,6 @@
-# CloudTools
+# ct
 
-CloudTools - Python Cloud Tools using Typer/FastAPI/Rust
+cloud tools - Python cloud tools using Typer/FastAPI/Rust
 
 Example demonstrating a Python package command line interface
 - Starting point to build out automation in cloud environments
