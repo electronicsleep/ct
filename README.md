@@ -1,6 +1,6 @@
 # ct
 
-cloud tools - Python cloud tools using Typer/FastAPI/Rust
+Cloud Tools - Python Tools using Typer/FastApi with Rust integration
 
 Example demonstrating a Python package command line interface
 - Starting point to build out automation in cloud environments
@@ -10,11 +10,21 @@ Example demonstrating a Python package command line interface
 - Simple API using FastAPI
 - Rust integration
 
+
+### Python uv
+```
+brew install uv
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+uv pip install -r requirements_api.txt
+```
+
 ### Python virtualenv
 ```
 brew install virtualenv
-virtualenv venv
-source venv/bin/activate
+virtualenv .venv
+source .venv/bin/activate
 pip3 install -r requirements.txt
 ```
 
