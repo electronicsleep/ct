@@ -1,33 +1,34 @@
 .PHONY: build
 
-build:
+setup:
+	./src/scripts/setup.sh
+
+test:
 	python3 src/ct.py --version
 	python3 src/ct.py --help
 
 check:
-	bash check.sh
+	bash src/scripts/check.sh
 	python3 src/ct.py test
 
 install:
-	pip3 uninstall ct
-	pip3 install -r requirements.txt
-	pip3 install .
-	ct --version
-	ct --help
+	./src/scripts/install.sh
 
 dev:
-	bash dev.sh
-
-clean:
-	-docker stop CloudTools
-	-docker rm CloudTools
-	-docker image rm ubuntu-dev
+	./src/scripts/dev.sh
 
 api:
 	bash -ex api.sh
 
 rust:
-	bash build.sh
+	./src/scripts/build.sh
 
 docs:
 	bash src/scripts/generate_docs.sh
+
+clean:
+	-rm -rf .venv
+	-rm -rf src/ct.egg-info/
+	-docker stop ct
+	-docker rm ct
+	# -docker image rm ubuntu-dev
