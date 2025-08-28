@@ -15,12 +15,26 @@ $ ct [OPTIONS] COMMAND [ARGS]...
 
 **Commands**:
 
+* `main`
 * `cs`: Endpoint Check: Check Sites
 * `test`: Test cmd
 * `aws`: AWS cmd: default: li
 * `gcp`: GCP cmd: default: li
 * `kube-events`: Show K8s events with failed status
 * `kube-pods`: Show K8s pods with failed status
+
+## `ct main`
+
+**Usage**:
+
+```console
+$ ct main [OPTIONS]
+```
+
+**Options**:
+
+* `-v, --verbose`
+* `--help`: Show this message and exit.
 
 ## `ct cs`
 
