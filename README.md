@@ -70,19 +70,12 @@ make docs
 
 For things that need to run faster/safer
 
-Building will enable Rust Python functions
+Building will enable Rust CLI functions
 ```
-bash build.sh
+make rust
 python3 src/ct.py rust-version
 python3 src/ct.py rust-print -c hello
 python3 src/ct.py rust-rand -c hello
-
-# PythonPackage: Find where ct is installed
-uv pip show ct | grep Location
-# Example: Copy to site-packages dir
-cp src/libcloudtools.so $(uv pip show ct | grep Location | tail -n1 | cut -f2 -d:)
-# Verify
-ct rust-version
 ```
 
 ### Links

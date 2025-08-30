@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Author: Chris Robertson electronicsleep@gmail.com
-# Purpose: CloudTools - Python cloud tools template using Typer/Fastapi
+# Purpose: CloudTools - Python cloud tools using Typer/Fastapi
 
 # Usage:
 # python3 src/ct.py --help
@@ -31,9 +31,10 @@ use_rust = False
 try:
     import ct_rust as ct_rust
     use_rust = True
+    print("Import Rust shared library")
 except ModuleNotFoundError as e:
     if verbose:
-        print(f"Rust cpython library not built skip\nINFO: {e}")
+        print(f"Rust cpython shared library not built skip\nINFO: {e}")
     pass
 
 app = typer.Typer(no_args_is_help=True)
@@ -64,7 +65,7 @@ def main(verbose: bool = typer.Option(False, "--verbose", "-v")):
 
 @app.command()
 def cs(verbose: bool = typer.Option(False, "--verbose", "-v")):
-    """Endpoint Check: Check Sites"""
+    """Check Sites"""
     rprint("[bold blue]check_sites[/bold blue]")
     ct_lib.check_sites(ct_inv.server_list, verbose)
 
