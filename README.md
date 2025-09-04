@@ -14,21 +14,11 @@ Example demonstrating a Python package command line interface
 ### Python uv
 ```
 brew install uv
-uv venv
+make
 source .venv/bin/activate
-uv pip install -r requirements.txt
-uv pip install -r requirements_api.txt
 ```
 
-### Python virtualenv
-```
-brew install virtualenv
-virtualenv .venv
-source .venv/bin/activate
-pip3 install -r requirements.txt
-```
-
-### Make
+### Build
 ```
 make
 make check

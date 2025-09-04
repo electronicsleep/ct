@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Author: Chris Robertson electronicsleep@gmail.com
-# Purpose: CloudTools - Python cloud tools template using Typer/Fastapi
+# Purpose: CloudTools - Python cloud tools using Typer/Fastapi
 
 # ct library
 
@@ -18,6 +18,10 @@ logging.basicConfig(filename='ct.log',
                     format='%(asctime)s:%(levelname)s:%(name)s:%(message)s')
 log = logging.getLogger("ct_lib")
 log.info("run ct_lib")
+
+
+def main():
+    print("INFO: main")
 
 
 def ask_continue():
@@ -40,14 +44,17 @@ def check_sites(server_list: list[str], verbose: bool):
         pprint.pprint(server_list)
     for url in server_list:
         print(f"check_sites cmd: {url}")
-        response = requests.get(url)
-        if response.status_code == 200:
-            print("200 ok")
-        if verbose:
-            pprint.pprint(response.content)
-            pprint.pprint(response.text)
-            pprint.pprint(response.headers)
-            pprint.pprint(response.status_code)
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            print("INFO: request ok")
+            if verbose:
+                pprint.pprint(response.content)
+                pprint.pprint(response.text)
+                pprint.pprint(response.headers)
+                pprint.pprint(response.status_code)
+        except requests.exceptions.RequestException as e:
+            print(f"ERROR: Failed request: {e}")
 
 
 def aws_li(region: str, verbose: bool):
