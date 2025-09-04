@@ -12,6 +12,7 @@ else
   virtualenv .venv
   source .venv/bin/activate
   pip3 install -r requirements.txt
+  pip3 install -r requirements_api.txt
 fi
 src/ct.py --version
 src/ct.py --help

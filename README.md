@@ -63,7 +63,6 @@ For things that need to run faster/safer
 Building will enable Rust CLI functions
 ```
 make rust
-python3 src/ct.py rust-version
 python3 src/ct.py rust-print -c hello
 python3 src/ct.py rust-rand -c hello
 ```
@@ -78,4 +77,4 @@ FastAPI: https://github.com/tiangolo/fastapi
 
 Rust: https://www.rust-lang.org
 
-Rust cpython: https://crates.io/crates/cpython
+Rust pyo3: https://docs.rs/pyo3/latest/pyo3/ 
