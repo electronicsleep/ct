@@ -123,12 +123,6 @@ def kube_pods(verbose: bool = typer.Option(False, "--verbose", "-v")):
 
 if use_rust:
     @app.command()
-    def rust_version():
-        """ Rust Version """
-        rprint("[bold blue]rust_version:[/bold blue]")
-        ct_rust.rust_version()
-
-    @app.command()
     def rust_print(cmd: str = typer.Option("test", "--cmd", "-c", help="rust_print"),
                    verbose: bool = typer.Option(False, "--verbose", "-v")):
         """ Rust Print """
@@ -139,6 +133,7 @@ if use_rust:
     def rust_rand(cmd: str = typer.Option(..., "--cmd", "-c", help="rust_rand"),
                   verbose: bool = typer.Option(False, "--verbose", "-v")):
         """ Rust Rand """
+        rprint(f"[bold blue]rust_rand: {cmd}[/bold blue]")
         ct_rust.rust_rand(cmd, verbose)
 
 

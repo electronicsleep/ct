@@ -18,7 +18,7 @@ dev:
 	./src/scripts/dev.sh
 
 api:
-	bash -ex api.sh
+	./src/scripts/api.sh
 
 rust:
 	./src/scripts/build.sh
@@ -31,4 +31,3 @@ clean:
 	-rm -rf src/ct.egg-info/
 	-docker stop ct
 	-docker rm ct
-	# -docker image rm ubuntu-dev

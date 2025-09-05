@@ -15,14 +15,11 @@ Example demonstrating a Python package command line interface
 ```
 brew install uv
 make
-source .venv/bin/activate
 ```
 
-### Build
+### Checks
 ```
-make
 make check
-make install
 ```
 
 ### Python Dev
@@ -63,18 +60,26 @@ For things that need to run faster/safer
 Building will enable Rust CLI functions
 ```
 make rust
-python3 src/ct.py rust-print -c hello
-python3 src/ct.py rust-rand -c hello
+python3 src/ct.py rust-print -c test
+python3 src/ct.py rust-rand -c test
 ```
 
 ### Links
 
-Python: https://www.python.org
+Python:
+https://www.python.org
 
-Typer: https://github.com/tiangolo/typer
+Typer:
+https://github.com/tiangolo/typer
 
-FastAPI: https://github.com/tiangolo/fastapi
+FastAPI:
+https://github.com/tiangolo/fastapi
 
-Rust: https://www.rust-lang.org
+Rust:
+https://www.rust-lang.org
 
-Rust pyo3: https://docs.rs/pyo3/latest/pyo3/ 
+Rust pyo3:
+https://docs.rs/pyo3/latest/pyo3
+
+uv:
+https://docs.astral.sh/uv/

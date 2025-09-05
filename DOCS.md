@@ -16,7 +16,7 @@ $ ct [OPTIONS] COMMAND [ARGS]...
 **Commands**:
 
 * `main`
-* `cs`: Endpoint Check: Check Sites
+* `cs`: Check Sites
 * `test`: Test cmd
 * `aws`: AWS cmd: default: li
 * `gcp`: GCP cmd: default: li
@@ -38,7 +38,7 @@ $ ct main [OPTIONS]
 
 ## `ct cs`
 
-Endpoint Check: Check Sites
+Check Sites
 
 **Usage**:
 
