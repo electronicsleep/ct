@@ -7,9 +7,9 @@ import typer
 
 def main(cmd: str = typer.Argument("test")):
     result = libcloudtools.rust_print(cmd)
-    print(f"INFO: rust_print: {result}")
+    print(f"INFO: rust: {result}")
     result = libcloudtools.rust_rand(cmd)
-    print(f"INFO: rust_rand: {result}")
+    print(f"INFO: rust: {result}")
 
 
 if __name__ == "__main__":

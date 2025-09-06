@@ -15,6 +15,7 @@ Example demonstrating a Python package command line interface
 ```
 brew install uv
 make
+source .venv/bin/activate
 ```
 
 ### Checks
@@ -32,7 +33,7 @@ python3 src/ct.py gcp -c li
 
 ### API
 ```
-bash api.sh
+make api
 bash src/test/curl-tests.sh
 
 # Swagger
@@ -67,19 +68,25 @@ python3 src/ct.py rust-rand -c test
 ### Links
 
 Python:
+
 https://www.python.org
 
 Typer:
+
 https://github.com/tiangolo/typer
 
 FastAPI:
+
 https://github.com/tiangolo/fastapi
 
 Rust:
+
 https://www.rust-lang.org
 
 Rust pyo3:
+
 https://docs.rs/pyo3/latest/pyo3
 
 uv:
+
 https://docs.astral.sh/uv/

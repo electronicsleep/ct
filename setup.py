@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setup(name="ct",
-      version="0.3.5",
+      version="0.3.6",
       description="CloudTools - Python/Rust Tools using Typer/Fastapi",
       py_modules=["ct", "ct_lib", "ct_inv", "ct_rust", "ct_kube"],
       exclude_package_data={"scripts": ["scripts"]},

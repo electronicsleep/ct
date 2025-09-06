@@ -1,6 +1,5 @@
 #!/bin/bash
-# Build/Run Rust cpython library
-# https://docs.rs/cpython/latest/cpython
+# Build/Run Rust pyo3 library
 set -e
 UNAME=$(uname)
 if [[ "$UNAME" == "Linux" ]]; then
@@ -12,6 +11,5 @@ elif [[ "$UNAME" == "Darwin" ]]; then
 fi
 
 echo "build ok"
-cd src
-python3 rust.py hello
+python3 src/rust.py hello
 echo "python3 rust.py ok"
